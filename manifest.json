@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Imagetwist Image Downloader",
+  "version": "1.1",
+  "description": "Fügt Download-Buttons zu Bildern auf hinzu.",
+  "permissions": ["downloads"],
+  "host_permissions": [
+    "https://website eintragen/*",
+    "https://weitere webseite eintragen/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://website eintragen/*",
+        "https://weitere webseite eintragen/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
